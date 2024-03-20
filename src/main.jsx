@@ -16,7 +16,7 @@ const router = new createBrowserRouter([
   {
     path: '/',
     element: <Home></Home>,
-    children:[
+    children: [
       {
         path: '/about',
         element: <About></About>
@@ -27,6 +27,7 @@ const router = new createBrowserRouter([
       },
       {
         path: '/users',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
         element: <Users></Users>
       }
     ]
@@ -39,6 +40,6 @@ const router = new createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>,
 )
