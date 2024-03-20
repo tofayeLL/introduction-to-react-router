@@ -2,3 +2,9 @@ nav a{
     margin-right: 50px;
     
 }
+nav a.active{
+    text-decoration: underline;
+    background-color: yellow;
+    padding: 8px;
+    border-radius: 8px;
+}
